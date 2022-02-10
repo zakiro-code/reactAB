@@ -22,11 +22,11 @@ function App() {
 
 
     const createPost = (newPost) => {
-      setPosts([...posts, newPost]);
-      setModal(false);
+        setPosts([...posts, newPost]);
+        setModal(false);
     }
 
-    async function fetchPosts () {
+    async function fetchPosts() {
         const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
         setPosts(response.data);
     }
